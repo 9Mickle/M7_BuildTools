@@ -5,13 +5,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>services</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>services</name>
 
     <parent>
         <groupId>com.epam</groupId>
         <artifactId>M7_BuildTools</artifactId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <properties>
@@ -24,13 +24,13 @@
         <dependency>
             <groupId>com.epam</groupId>
             <artifactId>utils</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
     </dependencies>
 

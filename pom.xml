@@ -6,8 +6,9 @@
 
     <groupId>com.epam</groupId>
     <artifactId>M7_BuildTools</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>main_project</name>
+    <packaging>pom</packaging>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -43,5 +44,4 @@
         </dependencies>
     </dependencyManagement>
 
-    <packaging>pom</packaging>
 </project>

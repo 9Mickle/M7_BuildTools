@@ -5,18 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>web</artifactId>
-    <version>1</version>
+    <version>1.0-SNAPSHOT</version>
     <name>web</name>
+    <packaging>war</packaging>
 
     <parent>
         <groupId>com.epam</groupId>
         <artifactId>M7_BuildTools</artifactId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <maven.war.plugin.version>3.3.1</maven.war.plugin.version>
     </properties>
 
     <dependencies>
@@ -24,13 +26,13 @@
         <dependency>
             <groupId>com.epam</groupId>
             <artifactId>services</artifactId>
-            <version>1.0</version>
-            <scope>compile</scope>
+            <version>${project.version}</version>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
         <dependency>
@@ -40,14 +42,12 @@
 
     </dependencies>
 
-    <packaging>war</packaging>
-
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-war-plugin</artifactId>
-                <version>3.3.1</version>
+                <version>${maven.war.plugin.version}</version>
                 <configuration>
                     <webXml>src/main/webapp/WEB-INF/web.xml</webXml>
                 </configuration>

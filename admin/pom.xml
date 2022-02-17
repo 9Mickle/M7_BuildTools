@@ -5,18 +5,20 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>admin</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <name>admin</name>
+    <packaging>jar</packaging>
 
     <parent>
         <groupId>com.epam</groupId>
         <artifactId>M7_BuildTools</artifactId>
-        <version>1.0</version>
+        <version>1.0-SNAPSHOT</version>
     </parent>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.plugin.version>3.8.1</maven.compiler.plugin.version>
     </properties>
 
     <dependencies>
@@ -24,25 +26,24 @@
         <dependency>
             <groupId>com.epam</groupId>
             <artifactId>services</artifactId>
-            <version>1.0</version>
+            <version>${project.version}</version>
             <scope>compile</scope>
         </dependency>
 
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
+            <scope>test</scope>
         </dependency>
 
     </dependencies>
-
-    <packaging>jar</packaging>
 
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>${maven.compiler.plugin.version}</version>
             </plugin>
         </plugins>
     </build>
